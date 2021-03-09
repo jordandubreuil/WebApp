@@ -1,11 +1,11 @@
 var mongoose = require('mongoose')
 var debug = require('debug')('demo:mongo')
-//var dbURI = 'mongodb://localhost/Testing'
-var dbURI = 'mongodb+srv://jordan:jordan1234@cluster0.ezrcu.mongodb.net/Testing?retryWrites=true&w=majority'
+var dbURI = 'mongodb://localhost/Testing'
 
-// if(process.env.NODE_ENV === 'production'){
-//     dbURI = process.env.MONGOLAB_URI
-// }
+
+ if(process.env.NODE_ENV === 'production'){
+    dbURI = process.env.MONGOLAB_URI
+ }
 
 mongoose.connect(dbURI,{
     useNewUrlParser:true,
